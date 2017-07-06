@@ -1,0 +1,129 @@
+\hypertarget{class_c_r_c16}{}\section{C\+R\+C16 Class Reference}
+\label{class_c_r_c16}\index{C\+R\+C16@{C\+R\+C16}}
+
+
+{\ttfamily \#include $<$Whandall\+C\+R\+C16.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_c_r_c16_a65bed8b421a029f5f78200b45657e86d}{init} (uint16\+\_\+t init\+With=0x\+F\+F\+F\+F, uint16\+\_\+t poly=0x1021)
+\item 
+void \hyperlink{class_c_r_c16_a89a04ddb806b3b62469960726d928603}{feed} (uint8\+\_\+t top\+Bit)
+\item 
+void \hyperlink{class_c_r_c16_a05d38b0d782f465ea7345c3ed7cafbaf}{feed} (const uint8\+\_\+t $\ast$ptr, uint8\+\_\+t len)
+\item 
+void \hyperlink{class_c_r_c16_a01cc3efe20c96193f230f4ec9cb43c74}{feed\+Reverse} (const uint8\+\_\+t $\ast$ptr, uint8\+\_\+t len)
+\item 
+uint16\+\_\+t \hyperlink{class_c_r_c16_a5c2b7692080612c117bb1c8ceb57e3bc}{get\+C\+RC} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint16\+\_\+t \hyperlink{class_c_r_c16_aae22e2b7c6b2b96d76bd04ab28caf6d4}{crc}
+\begin{DoxyCompactList}\small\item\em the current crc \end{DoxyCompactList}\item 
+uint16\+\_\+t \hyperlink{class_c_r_c16_a9a397960cbe3073502859d6a8e14e71e}{polynom}
+\begin{DoxyCompactList}\small\item\em the polynomial used \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_r_c16_a89a04ddb806b3b62469960726d928603}\label{class_c_r_c16_a89a04ddb806b3b62469960726d928603}} 
+\index{C\+R\+C16@{C\+R\+C16}!feed@{feed}}
+\index{feed@{feed}!C\+R\+C16@{C\+R\+C16}}
+\subsubsection{\texorpdfstring{feed()}{feed()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void C\+R\+C16\+::feed (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{top\+Bit }\end{DoxyParamCaption})}
+
+Stuff data
+
+Feed a single bit (the highest bit of the passed byte) 
+\begin{DoxyParams}{Parameters}
+{\em top\+Bit} & \mbox{[}in\mbox{]} the highest bit of tis value (0x80) will be fed to into the C\+RC \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_r_c16_a05d38b0d782f465ea7345c3ed7cafbaf}\label{class_c_r_c16_a05d38b0d782f465ea7345c3ed7cafbaf}} 
+\index{C\+R\+C16@{C\+R\+C16}!feed@{feed}}
+\index{feed@{feed}!C\+R\+C16@{C\+R\+C16}}
+\subsubsection{\texorpdfstring{feed()}{feed()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void C\+R\+C16\+::feed (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t $\ast$}]{ptr,  }\item[{uint8\+\_\+t}]{len }\end{DoxyParamCaption})}
+
+Stuff data
+
+Feed a range of bytes, in ascending order 
+\begin{DoxyParams}{Parameters}
+{\em ptr} & \mbox{[}in\mbox{]} points to data in R\+AM \\
+\hline
+{\em len} & \mbox{[}in\mbox{]} length of the data \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_r_c16_a01cc3efe20c96193f230f4ec9cb43c74}\label{class_c_r_c16_a01cc3efe20c96193f230f4ec9cb43c74}} 
+\index{C\+R\+C16@{C\+R\+C16}!feed\+Reverse@{feed\+Reverse}}
+\index{feed\+Reverse@{feed\+Reverse}!C\+R\+C16@{C\+R\+C16}}
+\subsubsection{\texorpdfstring{feed\+Reverse()}{feedReverse()}}
+{\footnotesize\ttfamily void C\+R\+C16\+::feed\+Reverse (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t $\ast$}]{ptr,  }\item[{uint8\+\_\+t}]{len }\end{DoxyParamCaption})}
+
+Stuff data
+
+Feed a range of bytes, in descending order 
+\begin{DoxyParams}{Parameters}
+{\em ptr} & \mbox{[}in\mbox{]} points to data in R\+AM \\
+\hline
+{\em len} & \mbox{[}in\mbox{]} length of the data \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_r_c16_a5c2b7692080612c117bb1c8ceb57e3bc}\label{class_c_r_c16_a5c2b7692080612c117bb1c8ceb57e3bc}} 
+\index{C\+R\+C16@{C\+R\+C16}!get\+C\+RC@{get\+C\+RC}}
+\index{get\+C\+RC@{get\+C\+RC}!C\+R\+C16@{C\+R\+C16}}
+\subsubsection{\texorpdfstring{get\+C\+R\+C()}{getCRC()}}
+{\footnotesize\ttfamily uint16\+\_\+t C\+R\+C16\+::get\+C\+RC (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Result
+
+Returns the computed C\+RC \begin{DoxyReturn}{Returns}
+the computed C\+RC 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_r_c16_a65bed8b421a029f5f78200b45657e86d}\label{class_c_r_c16_a65bed8b421a029f5f78200b45657e86d}} 
+\index{C\+R\+C16@{C\+R\+C16}!init@{init}}
+\index{init@{init}!C\+R\+C16@{C\+R\+C16}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void C\+R\+C16\+::init (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{init\+With = {\ttfamily 0xFFFF},  }\item[{uint16\+\_\+t}]{poly = {\ttfamily 0x1021} }\end{DoxyParamCaption})}
+
+Initialization
+
+Setup for a new C\+RC computation. Initialize the C\+RC and the polynomial.
+
+N\+R\+F24\+L01\+: The polynomial for 2 byte C\+RC is X$^\wedge$16+ X$^\wedge$12 + X$^\wedge$5 + 1. Initial value 0x\+F\+F\+FF. (==$>$ equals C\+R\+C-\/16-\/\+C\+C\+I\+TT polynomial) 
+\begin{DoxyParams}{Parameters}
+{\em init\+With} & \mbox{[}in\mbox{]} startvalue of the C\+RC \\
+\hline
+{\em poly} & \mbox{[}in\mbox{]} the polynomial to use (without the x$^\wedge$16 part) \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_c_r_c16_aae22e2b7c6b2b96d76bd04ab28caf6d4}\label{class_c_r_c16_aae22e2b7c6b2b96d76bd04ab28caf6d4}} 
+\index{C\+R\+C16@{C\+R\+C16}!crc@{crc}}
+\index{crc@{crc}!C\+R\+C16@{C\+R\+C16}}
+\subsubsection{\texorpdfstring{crc}{crc}}
+{\footnotesize\ttfamily uint16\+\_\+t C\+R\+C16\+::crc\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+the current crc 
+
+\mbox{\Hypertarget{class_c_r_c16_a9a397960cbe3073502859d6a8e14e71e}\label{class_c_r_c16_a9a397960cbe3073502859d6a8e14e71e}} 
+\index{C\+R\+C16@{C\+R\+C16}!polynom@{polynom}}
+\index{polynom@{polynom}!C\+R\+C16@{C\+R\+C16}}
+\subsubsection{\texorpdfstring{polynom}{polynom}}
+{\footnotesize\ttfamily uint16\+\_\+t C\+R\+C16\+::polynom\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+the polynomial used 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{_whandall_c_r_c16_8h}{Whandall\+C\+R\+C16.\+h}\item 
+src/\hyperlink{_whandall_c_r_c16_8cpp}{Whandall\+C\+R\+C16.\+cpp}\end{DoxyCompactItemize}
